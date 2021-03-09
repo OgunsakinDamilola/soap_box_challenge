@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\ChannelController;
+use App\Http\Controllers\WorkspaceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'Welcome to Soapbox backend challenge API'
+    ], 200);
 });
+
+Route::group(['prefix' => 'workspaces'], function () {
+    Route::get('/', [WorkspaceController::class, 'index']);
+    Route::post('create', [WorkspaceController::class, 'create']);
+    Route::post('login', [WorkspaceController::class, 'login']);
+    Route::post('logout', [WorkspaceController::class, 'logout']);
+    Route::get('accept-invite', [WorkspaceController::class, 'acceptInvite']);
+    Route::group(['middleware' => 'auth:api'], function () {
+        Route::group(['prefix' => 'users'], function () {
+            Route::post('create', [WorkspaceController::class, 'createUsers']);
+            Route::post('invite', [WorkspaceController::class, 'inviteUsers']);
+        });
+        Route::group(['prefix' => 'channels'], function(){
+            Route::get('/', [ChannelController::class, 'index']);
+            Route::post('create', [ChannelController::class, 'create']);
+        });
+    });
+});
+
+

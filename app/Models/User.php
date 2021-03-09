@@ -18,7 +18,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
     ];
@@ -41,4 +42,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function channel()
+    {
+        return $this->belongsTo(ChannelUser::class, 'id', 'user_id');
+    }
+
+    public function workspace()
+    {
+        return $this->belongsTo(Workspace::class, 'id', 'user_id');
+    }
 }

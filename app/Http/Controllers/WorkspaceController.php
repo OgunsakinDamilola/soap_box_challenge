@@ -155,10 +155,5 @@ class WorkspaceController extends Controller
         }
     }
 
-    public function logout()
-    {
-
-    }
-
 
 }

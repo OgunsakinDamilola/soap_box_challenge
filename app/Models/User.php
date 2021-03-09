@@ -52,4 +52,14 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Workspace::class, 'id', 'user_id');
     }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class, 'user_id', 'id');
+    }
+
+    public function readMessage()
+    {
+        return $this->belongsTo(ReadMessage::class, 'id', 'user_id');
+    }
 }

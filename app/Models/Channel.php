@@ -22,4 +22,9 @@ class Channel extends Model
     {
         return $this->hasMany(ChannelUser::class, 'channel_id', 'id');
     }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class, 'channel_id', 'id');
+    }
 }

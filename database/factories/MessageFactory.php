@@ -2,18 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Workspace;
+use App\Models\Message;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class WorkspaceFactory extends Factory
+class MessageFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Workspace::class;
+    protected $model = Message::class;
 
     /**
      * Define the model's default state.
@@ -22,11 +21,8 @@ class WorkspaceFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->company;
         return [
-            'name' => $name,
-            'slug' => Str::slug($name),
-            'description' => $this->faker->sentence
+            //
         ];
     }
 }

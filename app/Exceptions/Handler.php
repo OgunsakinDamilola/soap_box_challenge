@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Log;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -41,6 +42,7 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $exception)
     {
+        Log::error($exception->getMessage(), $exception->getTrace());
         if ($request->isJson()) {
             return response()->json([
                 'status' => false,

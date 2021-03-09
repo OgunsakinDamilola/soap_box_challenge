@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChannelController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\WorkspaceController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,9 +33,17 @@ Route::group(['prefix' => 'workspaces'], function () {
             Route::post('create', [WorkspaceController::class, 'createUsers']);
             Route::post('invite', [WorkspaceController::class, 'inviteUsers']);
         });
-        Route::group(['prefix' => 'channels'], function(){
+        Route::group(['prefix' => 'channels'], function () {
             Route::get('/', [ChannelController::class, 'index']);
             Route::post('create', [ChannelController::class, 'create']);
+            Route::group(['prefix' => 'users'], function () {
+                Route::post('create', [ChannelController::class, 'createUsers']);
+                Route::get('get-user-channels', [ChannelController::class, 'getUserChannels']);
+            });
+            Route::group(['prefix' => 'messages'], function () {
+                Route::post('create', [MessageController::class, 'create']);
+                Route::get('', [MessageController::class, 'index']);
+            });
         });
     });
 });

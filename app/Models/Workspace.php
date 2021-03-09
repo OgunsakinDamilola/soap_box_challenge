@@ -27,4 +27,9 @@ class Workspace extends Model
     {
         return $this->hasMany(WorkspaceUser::class, 'workspace_id', 'id')->orderBy('id', 'desc');
     }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class, 'workspace_id', 'id');
+    }
 }

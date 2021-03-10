@@ -26,11 +26,6 @@ class WorkspaceTest extends TestCase
         ];
     }
 
-    /**
-     * Test for successful creation of workspace
-     *
-     * @return void
-     */
     public function test_create_workspace_success()
     {
         $requestData = $this->create_work_space_request_data();

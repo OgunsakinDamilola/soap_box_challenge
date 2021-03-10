@@ -3,17 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="38538915-19bd-4c81-8647-3152bf9fd091" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChannelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChannelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WorkspaceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WorkspaceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Channel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Channel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Workspace.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Workspace.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/WorkspaceFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/WorkspaceFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ChannelFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ChannelFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ChannelMessagesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ChannelMessagesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ChannelTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ChannelTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ChannelUsersTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/WorkspaceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/WorkspaceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/WorkspaceUsersTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/WorkspaceUsersTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/NotificationsTest.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -215,7 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615261606643</updated>
       <workItem from="1615261609879" duration="32727000" />
-      <workItem from="1615308342385" duration="5814000" />
+      <workItem from="1615308342385" duration="19154000" />
     </task>
     <servers />
   </component>

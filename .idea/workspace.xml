@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38538915-19bd-4c81-8647-3152bf9fd091" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WorkspaceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WorkspaceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/WorkspaceUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/WorkspaceUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/WorkspaceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/WorkspaceTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -209,7 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615261606643</updated>
       <workItem from="1615261609879" duration="32727000" />
-      <workItem from="1615308342385" duration="20696000" />
+      <workItem from="1615308342385" duration="21047000" />
     </task>
     <servers />
   </component>

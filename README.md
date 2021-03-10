@@ -35,7 +35,8 @@ MAIL_FROM_NAME=****
 ```
 - Run `php artisan serve`.
 
-###Testing
+###Testing 
+
 To test this API, please run either of this commands in the root folder of the project
 ```bash
 php artisan test

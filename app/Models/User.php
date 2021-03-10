@@ -48,9 +48,9 @@ class User extends Authenticatable
         return $this->belongsTo(ChannelUser::class, 'id', 'user_id');
     }
 
-    public function workspace()
+    public function workspaces()
     {
-        return $this->belongsTo(Workspace::class, 'id', 'user_id');
+        return $this->hasMany(WorkspaceUser::class, 'user_id', 'id');
     }
 
     public function messages()

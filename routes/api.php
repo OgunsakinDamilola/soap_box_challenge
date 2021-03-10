@@ -23,12 +23,12 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'workspaces'], function () {
-    Route::get('/', [WorkspaceController::class, 'index']);
     Route::post('create', [WorkspaceController::class, 'create']);
     Route::post('login', [WorkspaceController::class, 'login']);
     Route::post('logout', [WorkspaceController::class, 'logout']);
     Route::get('accept-invite', [WorkspaceController::class, 'acceptInvite']);
     Route::group(['middleware' => 'auth:api'], function () {
+        Route::get('/', [WorkspaceController::class, 'index']);
         Route::group(['prefix' => 'users'], function () {
             Route::post('create', [WorkspaceController::class, 'createUsers']);
             Route::post('invite', [WorkspaceController::class, 'inviteUsers']);

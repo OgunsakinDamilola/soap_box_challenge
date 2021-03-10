@@ -51,13 +51,6 @@ class WorkspaceTest extends TestCase
         $this->assertFalse($errorResponse['status']);
     }
 
-    public function test_get_all_workspace(){
-        $response = $this->json('get','/api/workspaces');
-        $response->assertStatus(200);
-        $this->assertTrue($response['status']);
-        $this->assertArrayHasKey('data', $response);
-        $this->assertArrayHasKey('workspaces', $response['data']);
-    }
 
     public function test_login_to_workspace(){
         $requestData = $this->create_work_space_request_data();
@@ -71,6 +64,23 @@ class WorkspaceTest extends TestCase
         $this->assertTrue($response['status']);
         $this->assertArrayHasKey('data', $response);
         $this->assertArrayHasKey('access_token', $response['data']);
+    }
+
+    public function test_get_authenticated_user_workspaces(){
+        $requestData = $this->create_work_space_request_data();
+        $workspace = $this->json('post', '/api/workspaces/create', $requestData);
+        $workspace->assertStatus(200);
+        $workspaceResponse = $this->json('post','/api/workspaces/login?workspaceId='.$workspace['data']['workspace']['id'], [
+            'email' => $workspace['data']['owner']['email'],
+            'password' => 'password'
+        ]);
+        $header = ['Authorization' => 'Bearer ' . $workspaceResponse['data']['access_token']];
+        $workspaceResponse->assertStatus(200);
+        $response = $this->json('get','/api/workspaces', [], $header);
+        $response->assertStatus(200);
+        $this->assertTrue($response['status']);
+        $this->assertArrayHasKey('data', $response);
+        $this->assertArrayHasKey('workspaces', $response['data']);
     }
 
 

@@ -21,7 +21,8 @@ class WorkspaceController extends Controller
     public function index()
     {
         try {
-            $workspaces = Workspace::all();
+            $user = Auth::user();
+            $workspaces = $user->workspaces;
             return $this->successResponse('Workspaces returned', [
                 'workspaces' => $workspaces
             ]);
